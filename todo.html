@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>TO DO LIST</title>
+</head>
+    <body>
+         <!-- TO DO LIST array -->
+        <script type="text/javascript">
+            let listItem = ['Sample task 1', 'Sample task 2'];
+        </script>
+
+        <!-- Displays the list -->
+
+        <script type="text/javascript">
+            function newElement() {
+                let tempItem = document.getElementById('myInput').value;
+                listItem.push(tempItem);
+                displayList(tempItem);
+                document.getElementById('myInput').value = '';
+
+            }
+        </script>
+
+        <!-- Clears the list  -->
+
+        <script>
+            function removeAll() {                
+                for(let i=0;i < listItem.length; i++){
+                    let temp = document.getElementById('list');
+                    temp.remove();
+                }
+                listItem = [];
+            }
+        </script> 
+        
+        <!-- Stuff on screen -->
+
+        <div class="header todo-form container">
+            <h2 style="margin:5px">To Do List</h2><br>
+            <input type="text" id="myInput" placeholder="Task name...">
+            <span onclick="newElement()" class="addBtn">Add</span> 
+            <button type="button" class="delete-button" id="clear-list" onclick="removeAll()">Clear Items</button><br>
+        
+            <div class="todo-items" id="display">
+
+                <ul  id="myUl">
+                    <script type="text/javascript">
+                        listItem.forEach(displayList);
+                        
+                        function displayList (item) {
+                            document.getElementById('display').innerHTML += " <li class='item' id='list'>" + item + "</li>"
+                        }
+                    </script>
+                </ul>
+            </div>
+        </div>
+        
+        
+        
+        
+
+        
+
+            
+</body>
+</html>
