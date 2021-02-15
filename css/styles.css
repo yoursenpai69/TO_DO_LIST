@@ -1,0 +1,131 @@
+/* common styles */ 
+*{
+padding: 0;
+margin: 0;
+}
+
+body {
+width: 100vw;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+background-color: #01012B;
+font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+cursor: pointer;
+background-color: #FF2A6D;
+color: black;
+}
+ul {
+list-style-type: none;/* get rid of bullet points on side of list items points on side of list items */
+}
+
+/* common style ends */
+
+/* container */
+.container {
+min-width: 700px;
+display: flex;
+flex-direction: column; 
+align-items: center; 
+padding: 20px;
+}
+
+h2 {
+color: #FF2A6D;
+font-size: 3rem;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* todo-form */
+
+.todo-form { 
+margin: 40px 0px; 
+}
+
+#myInput { 
+width: 300px;                                                                           
+border: none; 
+outline: none;
+border-radius: 5px; 
+padding: 5px 5px; 
+margin-right: 1px 0px;
+font-size: 1rem;
+font-family: 'Montserrat', sans-serif;
+color: #05D9E8;
+background-color: #005678;
+}
+
+
+.addBtn { 
+    background-color: #005678;
+    border: none;
+    color: #05D9E8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    margin: 20px;
+    font-size: 1rem;
+}
+/* todo-form style ends */
+
+/* todo-items */ 
+.todo-items {
+min-width: 350px;
+}
+
+/* each li with class="item" */ 
+.item {
+background-color: #005678;
+color: #05D9E8;
+padding: 1 0px;
+font-size: 1.2rem;
+}
+
+.item:first-child { 
+border-top-left-radius: 7px; 
+border-top-right-radius: 7px; 
+}
+
+.item:last-child { 
+border-bottom-left-radius: 7px; 
+border-bottom-right-radius: 7px; 
+}
+
+/* item style end */
+
+.checkbox{ 
+margin-right: 1 0px;
+}
+
+
+.delete-button {
+float: right;
+background-color: #005678;
+color: #05D9E8;
+border: none;
+outline: none;
+border-radius: 3px;
+box-shadow: 1px 2px 3px rgba(0,0,0,0.6); 
+padding: 10px 20px; 
+margin-left: 10px; 
+font-size: 1rem; 
+font-weight: 550;
+font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* applied when the todo item is checked  */
+
+.checked {
+text-decoration: line-through;
+}
+
+/* todo-items style ends */ 
+
+/* container style ends */
